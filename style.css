@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+h3{
+    font-family: 'Noto Sans Mono', monospace;
+}
+h2{
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: xx-large;
+}
+body { 
+    background: #889cd5; 
+}
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+header, footer {
+    justify-content: space-between;
+    text-align: justify;
+    height: 3em;
+    padding: 2em 1em 1em;
+    background: #042b52;
+    color: #fff;
+}
+footer{
+    margin-top: 1em;
+    padding: 2em 1em 2em;
+}
+aside {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify;
+    width: 30%;
+    padding: 2em ;
+    float: right;
+    color: #fff;
+}
+header nav, .partOfLogo, #logo {
+    margin: 1px;
+    display: inline-block;
+}
+#toStart{
+    text-align: center;
+}
+#toStart a{
+    color: #042b52;
+}
+#logo a{
+    align-content: flex-start;
+    color:#ee930a;
+    text-decoration: none;
+}
+nav{
+    text-align:right;
+    margin-right: 5px;
+}
+.partOfLogo {
+    position:sticky;
+    border: 8px solid gold;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+blockquote, cite {
+    text-align: right;
+    display: block;
+}
+dt ~ dd {
+    font-family: "Courier New", Courier, monospace;
+}
+cite + p{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: small;
+} 
+.solarSystem{
+    display: inline-block;    
+}
+.solarSystem img{
+    width: 450px;
+    height: 350px;
+}
+nav a:link{
+    color:white;
+}
+address a, nav a:visited{
+    color:rgb(94, 182, 240);
+}
+nav a:hover{
+    color: rgb(207, 107, 25);
+}
+nav a:active{
+    color: rgb(201, 33, 7);
+}
