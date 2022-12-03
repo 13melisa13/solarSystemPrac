@@ -1,0 +1,228 @@
+@media (orientation:portrait) {
+    .boxNote:hover{
+        z-index: 10;
+        position: fixed;
+        top:0;
+        left:11vw;
+        width: 500px;
+        height: 500px;
+        margin-top: 13vh;
+        padding-top: 1vh;
+        transition: all 0.5s ease-in;
+    }
+    .notification:hover{
+        width: 98%;
+        left:1%;
+    }
+    .notification{
+        height: 10vw;
+        width: 10vw;
+        border-radius: 5vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+     .notification .fa{
+        line-height: 180%;
+        font-size: 300%;
+    } 
+    .notification .num{
+        opacity: 0;
+    }
+    .ol{
+        top:10vw;
+        left:1%;
+        margin: 0;
+        width: 98%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        list-style-type: none; 
+        counter-reset: num;
+    }
+    .ol li:hover{
+        width: 110%;
+        left: -7%;
+        height: 2vh;
+    }
+
+}
+@media (orientation:landscape) {
+
+    .boxNote:hover{
+        transform: translate(2vw,-37vh);
+    }
+    .notification:hover{
+        width: 300px;
+        
+    }
+    .notification{
+        width: 10vh;
+        height: 10vh;
+        border-radius: 5vh;
+    }
+    .notification .fa{
+        line-height: 180%;
+        font-size: 200%;
+    }
+    .notification .num{
+        position: absolute;
+        top:0;
+        right: 0;
+        font-size: 1rem;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 3vh;
+        text-align: center;
+        background-color: #f33977;
+    }
+    .ol{
+        height: 380%;
+        width: 100%;
+    }
+    .ol li:hover{
+        width: 120%;
+        left: -14%;
+        height: 10%;
+    }
+}
+.boxNote{
+    z-index: 10;
+    position: fixed;
+    right: 5vw;
+    bottom: 3vh;
+    transition: all 1s;  
+}
+.notification:hover{
+    height:min-content;
+    justify-content: left;
+    text-align: left;
+    padding: 0 2%;
+    background-color:#b90440;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: all 0.5s ease-in;
+
+}
+.notification{
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: all 1s;
+} 
+.notification:hover .fa{
+    color: #fff;
+}
+.notification .fa{
+    color: #cecece;
+}
+.notification:hover .ol{
+    opacity: 1;
+    visibility: visible;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.ol{
+    border-radius: 30px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left:0;
+    margin: 0;
+    transition: all 0.5s ease-in;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    list-style-type: none; 
+    counter-reset: num;
+}
+.ol li:hover{
+    background: #b90440;
+    color: #fff;
+    position: relative;
+    font-size: large;
+}
+.ol li:hover::before {
+    background: #fff;
+    color: #b90440;
+    padding: 2px 6px;
+}
+.ol li:before {
+    content: counter(num); 
+    counter-increment: num;
+    top: 0;
+    left: -38px;
+    width: 28px;
+    height: 28px;
+    background: #b90440;
+    color: #fff;
+    border-radius: 50%;
+    padding: 1px 5px;
+}
+.ol li{
+    position: relative;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 0.5s ease-in;
+    
+}
+
+.close,.close::before,.close::after {
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 4px;
+        top:50%;
+        background-color: #100f0f;
+      }
+      
+      .close::before {
+        content: '';
+        top: 0;
+        transform: rotate(0);
+      }
+      .close::after {
+        content: '';
+        top: 0;
+        transform: rotate(90deg);
+      }
+      .close{
+        cursor: pointer;
+        right: 0;
+        transform: rotate(45deg);
+      }
+      .ol li:hover .close{
+        right: 2em;
+      } 
+      .notBox {
+        z-index: 20;
+        position: fixed;
+        top:20vh;
+        display: flex;
+        flex-direction: column;
+        column-gap: 1em;
+      }
+      .not {
+        width: 100px;
+        height: 2em;
+        margin: 20px 0;
+        padding: 0.5em;
+        text-align: center;
+        background-color: #e37197;
+        border-radius: 5px;
+        position:relative;
+      }   
+
+      .icon.selected{
+        border: #100f0f solid 2px;
+      }

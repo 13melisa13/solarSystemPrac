@@ -8,9 +8,9 @@ function showNotification(text){
         alert.remove();
     }, 1500)
 }
-
+let ol = document.querySelector(".notification ol");
 function create (){
-    let ol = document.querySelector(".notification ol");
+    
     ol.addEventListener("click",(event) => {
             let close = event.target.closest(".close");
             if (!close) return;
@@ -41,16 +41,17 @@ function create (){
     }
     document.getElementById('num').innerHTML = array.length;
 }
-document.getElementById("create").addEventListener("click",create);
+document.getElementById("create").addEventListener("click", create);
 
-
+ol.ondblclick = function (){
+    return false;
+}
 
 
 
 
 let list = document.querySelectorAll(".notification ol li");
 let array = Array.from(list);
-
 
 function compare (a, b){
     if (a.at(length-1) < b.at(length-1)) return -1;
