@@ -14,15 +14,19 @@
             S<div class="partOfLogo"></div>lar System
           </a>
         </div>
-        <nav>
+        
+            <input id="menu__toggle" type="checkbox">
+        <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+        <nav class = "menu__box">
         <div><a href="index.html#occurrence">Возникновение</a></div>
         <div><a href="index.html#structure">Строение</a></div>
-        <div><a href="index.html#image">Дополнительные материалы</a></div>     
-        
+        <div><a href="index.html#image">Галерея</a></div> 
+        <div><a href="reg.html">Регистрация</a></div>     
       </nav>
     </header>
     <main>
-      
       
         <aside>
           <p>Изучение солнечной системы - хороший повод пересмотреть любимые мультфильмы</p>
@@ -30,31 +34,28 @@
             alt="Beautiful System of the Sun" width="100%" ></a>
           
         </aside>
-        <article>
+        
           <h1 id="start">Солнечная система</h1>
           <div id="down"><a href="index.html#image">Карта</a></div>
-        <section >
-
+        <section id = "section1">
           <blockquote>Астрономия полезна потому, что она возвышает нас над нами самими;<br>
           она полезна потому, что она величественна; она полезна потому, <br>
           что она прекрасна. Именно она являет нам, как ничтожен <br>
           человек телом  и как он велик духом.</blockquote>
           <cite>Анри Пуанкаре</cite>
-        
           <p><strong>Солнечная система</strong> – это совокупность планет, вращающихся вокруг центральной звезды. Ученым
           удалось установить, что ей примерно 4,57 млрд лет, а появилась она за счет гравитационного
           сжатия газопылевого облака. В основе системы лежит яркая звезда – Солнце, которое удерживает
           планеты и другие объекты. заставляя их вращаться по орбите на определенном расстоянии. Оно 
           во много раз превосходит по диаметру другие объекты, находящиеся в области его притяжения.<br>
           </p>
-          <p>
-          <b>Интересный факт:</b> Солнце обладает такой большой массой, что все остальные планеты системы 
+          <p><b>Интересный факт:</b> Солнце обладает такой большой массой, что все остальные планеты системы 
           составляют лишь 1,4*10<sup>-3</sup>% от его веса. В составе Солнечной системы, помимо звезды, 
           находится восемь основных планет, а также пять карликовых. Располагается она в галактике Млечный Путь,
           в рукаве Ориона.
           </p>
         </section>
-        <section>
+        <section id = section2>
           <h2 id="occurrence">Возникновение солнечной системы</h2>
           <p>Поскольку Солнечной системе миллиарды лет, люди могут лишь строить 
           гипотезы о способах ее появления. Наиболее популярной является небулярная
@@ -97,7 +98,7 @@
         
         </section>
         <div id="up"><a href="index.html#start">Вверх</a></div>
-        <section>
+        <section id = "section3">
           <h2 id="structure">Строение солнечной системы</h2>
           <pre><blockquote>Я ль несся к бездне полуночной,
 Иль сонмы звезд ко мне неслись?
@@ -146,12 +147,16 @@
               планетарного статуса Плутона и отнесение его к новой классификации под названием 
               карликовая планета.</i> </p>
         </section>
-        <section id="imgSection">
-          <h2 id="image">Дополнительные материалы</h2>
+        <section id="section">
+          <h2 id="image">Галерея</h2>
           <div class="solarSystem">
-          <img src="https://img.besthqwallpapers.com/Uploads/24-11-2017/30253/solar-system-planetary-series-planets-of-solar-system-sun-the-earth.jpg"  
+          <img src="imgMap.jpg"  
           usemap="#sunSystem">
-          <map name="sunSystem">
+          
+          <img src="img1.jpg">
+          <img src="img2.jpg">
+        </div>
+        <map name="sunSystem">
               <area alt="space" href="https://ru.wikipedia.org/wiki/Космическое_пространство" 
               coords="200,0,600,200" shape="rect">
               <area alt="sun" href="https://ru.wikipedia.org/wiki/Солнце" 
@@ -159,11 +164,8 @@
               <area alt="planets" href="https://ru.wikipedia.org/wiki/Планета#:~:text=Плане́та%20—%20небесное%20тело%2C%20вращающееся,называли%20т.%20н.%20«блуждающие%20звёзды»" 
               coords="369,204,233,211,211,294,304,399,518,418,609,373,541,246" shape="circle">
           </map>
-          
-        </div>
-        
       </section>
-        <section>
+        <section id = "section4">
           <h3 id="list">Список определений:</h3>
           <dl>
             <dt>Астрономия</dt>
@@ -201,8 +203,9 @@
         </dl>
        
         </section>
-        
-      </article>
+        <section id="sectionVideo">
+        <iframe src="video.html" frameborder="0" width="800" height="550"></iframe>
+      </section>
       
     </main>
       <footer>

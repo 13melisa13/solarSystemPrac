@@ -15,60 +15,57 @@ h1{
 body { 
     background: #889cd5; 
 }
+.solarSystem{
+    display: flex;
+    row-gap:30px;
+    column-gap: 30px;
+}
+aside {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify; 
+    padding: 5%;
+    float: right;
+    color: #fff;
+}
 main{
     position: relative;
-    margin-top: 100px;
+    margin-top: 15%;
 }
-header{
-    top:0;
-}
+
 header, footer {
-    padding: 30px;
     background: #042b52;
+    padding:2%;
     color: #fff;
-    width: 120%;
     position: absolute;
     left:0;
     right: 0;
     
 }
-footer{
-    margin-top: 1em;
-    padding: 2em 1em 2em;
-   
+header{
+    top:0;
 }
-aside {
-    font-family: Impact, Charcoal, sans-serif;
-    text-align: justify;
-    width: 30%;
-    padding: 2em ;
-    float: right;
-    color: #fff;
-}
-header nav, .partOfLogo, #logo, div {
-    display: inline-block;
-}
+
 header nav {
-    width: 80%;
-    text-align: justify;
+    width: 60%;
+    text-align: right;
 }
 #up, #down{
     text-align: center;
     background-color: antiquewhite;
-    padding: 7px;
-    border-radius: 35%;
+    padding: 1%;
+    border-radius: 30%;
 }
 #up{
     position: sticky;
-    top: 10px;
+    top: 1%;
     z-index: 2;
 }
 #down{
     position: fixed;
-    left: 10px;
+    left: 1%;
     z-index: 1;
 }
-#up a, #down a{
+ #up a , #down a{
     color: #010d19;
     text-decoration: none;
 }
@@ -77,27 +74,6 @@ header nav {
     color:#ee930a;
     text-decoration: none;
 }
-nav > div{
-    
-    position: relative;
-    left: 200px;
-    padding: 10px;
-    
-}
-#logo{
-    margin-right: 5px;
-    display: inline;
-    position: absolute;
-    
-}
-.partOfLogo {
-    position:relative;
-    border: 8px solid gold;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-}
-
 blockquote, cite {
     text-align: right;
     display: block;
@@ -109,12 +85,6 @@ cite + p{
     font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: small;
 } 
-
-.solarSystem img{
-    width: 650px;
-    height: 500px;
-    float: inherit; 
-}
 nav div a:link{
     color:white; 
     text-decoration: none;
@@ -128,6 +98,94 @@ nav a:hover{
 nav a:active{
     color: rgb(201, 33, 7);
 }
+section{
+    margin-left: 7%;
+    margin-top: 1%;
+}
+address{
+    text-align: center;
+}
+ul{
+    list-style: square;
+}
+legend{
+    font-size: large;
+}
+input, label ,div .radio, select{
+    display: block;
+}
+.radio{
+    display: inline-block;
+}
+.radio input, .radio label{
+    display: inline;
+}
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+fieldset{
+    width: 40vw;
+}
+form input, form select, form textarea{
+    display: block;
+    margin: 2vh;
+}
+::placeholder, option {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#323337;
+}
+:focus{
+    color: #010d19;
+}
+video{
+    position:relative;
+    left: 30vW ;
+}
+input, select, textarea, button{
+    text-align: center;
+        background-color: rgb(128, 159, 199);
+        padding: 1%;
+        border-color: none;
+}
+textarea{
+    text-align: justify;
+}
+#reg {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify;
+    padding: 1%;
+    position: relative;
+    left: 30%;
+    color: #fff;
+}
+.partOfLogo {
+    position:relative;
+    border: 8px solid gold;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+div {
+    display: inline-block;
+}   
+nav{
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+header{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.solarSystem img{
+   width: 450px;
+    
+    float: inherit; 
+}
+
 #img1 {
     float: right;
     width: 600px;
@@ -138,11 +196,147 @@ nav a:active{
     float: left;
     padding: 20px;
 }
-section{
-    margin-left: 60px;
-    margin-top: 20px;
+@media (orientation:portrait) {
+    header, footer{
+        padding: 5%;
+        font-size: xx-large;
+        
+    }
+    header{
+        position: fixed;
+        z-index: 2;
+    }
+    #menu__toggle {
+        opacity: 0;
+      }
+    
+      .menu__btn {
+        display: flex; 
+        align-items: center;  
+        position: fixed;
+        top: 0%;
+        right: 10%;
+        width: 5%;
+        height: 7%;
+        z-index: 2;
+      }
+     
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #f4eaea;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -10px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 10px;
+      }
+      .menu__box {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        gap: 3%;
+        position: fixed;
+        visibility: hidden;
+        top: 7%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #002137;
+        z-index: 1;
+       
+      }
+      /* элементы меню */
+      .menu__box > div {
+        display: block;
+        padding: 12px 24px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .menu__box>div:hover {
+        background-color: #d7cfdc;
+      }
+      #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+      }
+
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #down,#up{
+        visibility: hidden;
+    }
+    aside {
+        order: 1;  
+    }
+    #section1{
+        order: 0;
+    }
+    #section2{
+        order: 3;
+    }
+    #section3{
+        order: 4;
+    }
+    #section4{
+        order: 6;
+    }
+    #section{
+        order: 5;
+    }
+    #sectionVideo{
+        order: 7;
+    }
+    .solarSystem{
+        flex-direction: column;
+        align-content: stretch;
+    }
+    .solarSystem img{
+        width:90%;
+    }
+    
 }
-address{
-    text-align: center;
+@media (orientation:landscape) {
+    #menu__toggle {
+        opacity: 0;
+      }
+    aside{
+        width: 30%;
+    }
+    .solarSystem{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
 }
 
