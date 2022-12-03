@@ -1,0 +1,143 @@
+.cardHolder1{
+    width: 100%;
+    order:10;
+    display:flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 0;
+    gap:2vh 2vw;
+}
+.cardHolder1 .box:hover .content{
+    height: 60%;
+}
+.cardHolder1 .box:hover .content::after{
+    animation: animateBottom 6s linear infinite;
+}
+.cardHolder1 .box:hover .content::before{
+    animation: animateTop 6s linear infinite;
+}
+@keyframes animateBottom{
+    0%,100%{
+        transform: translateY(15vh);
+    }
+    50%{
+        transform: translateY(-5vh);
+    }
+}
+@keyframes animateTop{
+    0%,100%{
+        transform: translateY(-15vh);
+    }
+    50%{
+        transform: translateY(5vh);
+    }
+}
+.cardHolder1 .box .content::after,
+.cardHolder1 .box .content::before,
+.cardHolder1 .box .content{
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5vh 9vh  rgba(0,0,0,0.1);
+    padding: 1em;
+    border-radius: 2vh;
+}
+.cardHolder1 .box .content::before{
+    z-index: 2;
+    position: absolute;
+    bottom: 97%;
+    left:-5%;
+    content: '';
+    width: calc(100%/7);
+    height: calc(100%/7);
+}
+.cardHolder1 .box .content::after{
+    z-index: 2;
+    position: absolute;
+    top: 94%;
+    right: -10%;
+    content: '';
+    width: calc(100%/4);
+    height: calc(100%/4);
+}
+.cardHolder1 .box .content{  
+    width: 300px;
+    height: max-content;
+    color:beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+.cardHolder1 .box:hover::after,
+.cardHolder1 .box:hover::before{
+    transform:skewX(0deg);
+    width: calc(100%-50px);
+    left:20%;
+}
+.cardHolder1 .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh 3vw;
+    transition: .5s;
+}
+.cardHolder1 .box::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 3vw;
+    width: 50%;
+    height: 100%;
+    background: #fff ;
+    transform:skewX(15deg);
+    transition:.5s;
+    filter:blur(3vh);
+    z-index: -1;
+}
+.cardHolder1 .box::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 3vw;
+    width: 50%;
+    height: 100%;
+    background: #fff ;
+    transform:skewX(15deg);
+    transition:.5s;
+    z-index: -1;
+}
+.cardHolder1 .box a::before{
+    position: absolute;
+    top: 0;
+    left:0;
+    content:'';
+    border-radius: 1vh;
+    width: 100%;
+    height: 100%;    
+    background-color: white;
+    z-index: -1;
+}
+.cardHolder1 .box a{
+    text-decoration: none;
+    color:black;
+    position: relative;    
+    padding: 1vh 1vw;
+    font-weight: 600;
+}
+.cardHolder1 .box:nth-child(1)::after,
+.cardHolder1 .box:nth-child(1)::before{
+    background: linear-gradient(315deg, #ffbc00,#ff0058);
+}
+.cardHolder1 .box:nth-child(2)::after,
+.cardHolder1 .box:nth-child(2)::before{
+    background: linear-gradient(315deg, #442ed4,#ff0058);
+}
+.cardHolder1 .box:nth-child(3)::after,
+.cardHolder1 .box:nth-child(3)::before{
+    background: linear-gradient(315deg, #16f443,#00b3ff);
+}

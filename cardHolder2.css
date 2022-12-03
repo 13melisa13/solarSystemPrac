@@ -1,0 +1,105 @@
+.cardHolder2:hover .box{
+    filter: blur(5px);
+}
+.cardHolder2 .box:hover{
+    filter: blur(0);
+    transform: scale(1);
+}
+.cardHolder2{
+    width: 100%;
+    order:11;
+    display:flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 0;
+    gap:2vh 2vw;
+    margin: 7vh 2vw 7vh 0vw;
+}
+.cardHolder2 .box .content h4{
+    margin: 0;
+}
+.cardHolder2 .box .content{  
+    padding: 1em;
+    height: max-content;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+    flex-direction: column;
+    text-align: center;
+
+} 
+ .cardHolder2 .box a::before{
+    position: absolute;
+    top: 0;
+    left:0;
+    content:'';
+    border-radius: 3vh;
+    width: 100%;
+    height: 100%;    
+    background-color: white;
+    z-index: -1;
+}
+ .cardHolder2 .box a{
+    text-decoration: none;
+    color:white;
+    position: relative;  
+    padding: 1vh 1vw;
+    font-weight: 600;
+}
+.cardHolder2 .box .content h3{
+    font-size: xxx-large;
+    color: white;
+    position: absolute;
+    top: 2%;
+    font-family: fantasy;
+}
+ .cardHolder2 .box{
+    transform: scale(.9);
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display:flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 4vh 3vw;
+    transition: .5s;  
+    overflow: hidden; 
+    padding-bottom: 1vh;
+    border-radius: 10%;
+    box-shadow: 0 5vh 9vh  rgba(0,0,0,0.1);
+}
+.cardHolder2 .box::before{
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -17%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    z-index: -1;
+}
+.cardHolder2 .box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+    background-color: white;
+    z-index: -2;
+}
+
+.cardHolder2 .box:nth-child(1) a::before,
+.cardHolder2 .box:nth-child(1)::before{
+    background: #ffc60a;
+}
+.cardHolder2 .box:nth-child(2) a::before,
+.cardHolder2 .box:nth-child(2)::before{
+    background: #ff0058;
+}
+.cardHolder2 .box:nth-child(3)  a::before,
+.cardHolder2 .box:nth-child(3)::before{
+    background: #e605ea;
+}
