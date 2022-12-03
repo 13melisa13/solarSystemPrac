@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Solar System </title> 
+<link rel="icon" href="favicon.ico" s="any">
+<link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <header>     
+        <div id="logo"> 
+          <a href="index.html">
+            S<div class="partOfLogo"></div>lar System
+          </a>
+        </div>
+     <nav>
+       <div><a href="index.html#occurrence">Возникновение</a></div>
+        <div><a href="index.html#structure">Строение</a></div>
+        <div><a href="index.html#image">Дополнительные материалы</a></div>     
+      </nav> 
+
+    </header>
+    <main>
+
+      
+<article id = "reg" >     
+<form action="" method="post">
+<fieldset>
+<legend>Регистрация</legend>
+<label for="name">Введите имя</label>
+<input type="text" name="name" id="name" placeholder="Введите имя" size="15" maxlength="15" >
+<label for="email">Введите адрес электронной почты</label>
+<input type="email" name ="email" id="email" size="30" placeholder="Введите адрес электронной почты" >
+<label for="login">Введите логин</label>
+<input type="text" name="login" id="login" placeholder="Придумайте логин" size="15" maxlength="15" pattern="[a-zA-Z0-9]">
+<label for="text" spellcheck="true">Расскажите о себе</label>
+<textarea name="text" cols="50" rows="6" maxlength="125" placeholder="Хобби, любимые книги или философия жизни">Достоевский</textarea>
+<label for="tel">Введите номер телефона</label>
+<input type="tel" id = "tel" >
+<label for="sex">Выберите пол</label>
+<div class="radio"><label for="sex1">
+<input type="radio" name="sex1" id="sex1">Ж</label></div>
+<div class="radio"><label for="sex2">
+<input type="radio" name="sex2" id="sex2">М</label></div>
+<label for="datetime-local">Выберите дату и время рождения</label>
+<input type="datetime-local" name="datetime-local" id="datetime-local">
+<label for="cite">Выберите город</label>
+<select name="city" id="cite" name="">
+<option value="">--Выберите город--</option>
+<option value="">Москва</option>
+<option value="">Санкт-Петербург</option>
+</select> 
+<div class="radio"><label for="sogl">
+<input type="checkbox" name="" id="sogl" required >
+Вы соглашаетесь с нашей политикой в отношении конфиденциальности</label>
+</div>
+<div class="radio"><label for="rassl">
+<input type="checkbox" name="" id="rassl" checked>
+Вы хотите получать рассылку</label></div>   
+<label for="password-input">Введите пароль</label>        
+<input type="password" id="password-input" name="password" placeholder="Придумайте пароль" size="15" maxlength="15" >
+<label for="file">Выберите фотографию для профиля</label>
+<input type="file" name="file" id="file">
+<div class="radio">
+<input type="submit" value="Продолжить" name ="r">
+<button type="reset">Очистить поля</button></div>
+</fieldset>
+</form>    
+</article>
+</main>
+      <footer>
+        <address>
+          О нас<br>
+          <a href="tel:01234567890">Позвонить</a>
+          <br>
+          <a href="mailto:sendemail@gmail.com">Написать письмо</a>
+        </address>
+      </footer>
+</body>
+</html>

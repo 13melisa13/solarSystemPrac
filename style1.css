@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+h3{
+    font-family: 'Noto Sans Mono', monospace;
+}
+h2{
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: xx-large;
+    text-align: center;
+}
+/* h1-h3 */
+
+body { 
+    background: #889cd5; 
+    width: 95%;
+}
+main{
+    position: relative;
+    margin-top: 100px;
+    width: 90vm;
+}
+section{
+    width: 80vw;
+}
+header{
+    top:0;
+    width: 93vw;
+
+}
+main, footer, header{
+    display: block;
+}
+header, footer {
+    padding: 30px;
+    background: #042b52;
+    color: #fff;  
+    
+    left:0;
+    right:0;   
+}
+footer{
+    margin-top: 1em;
+    padding: 2em 1em;
+    width: 95vw;
+    position: relative;
+    bottom: 0;
+}
+#reg, #reklama{
+    display: inline-block;
+}
+#reg {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify;
+    width: 30vw;
+    height: 70%;
+    padding: 2em ;
+    float: left;
+    color: #fff;
+    position: absolute;
+    left:0
+}
+#reklama {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify;
+    width: 30vw;
+    height: 70%;
+    padding: 2em ;
+    float: right;
+    color: #fff;
+    position: absolute;
+    right: 0;
+}
+legend{
+    font-size: large;
+}
+input, label ,div .radio, select{
+    display: block;
+}
+.radio{
+    display: inline-block;
+}
+.radio input, .radio label{
+    display: inline;
+}
+label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header div, div {
+    display: inline-block;
+}
+fieldset{
+    width: 40vw;
+}
+form input, form select, form textarea{
+    display: block;
+    margin: 2vh;
+}
+header nav {
+    width: 70%;
+    text-align: justify;
+}
+input, select{
+    text-align: center;
+    background-color: rgb(128, 159, 199);
+    padding: 3px;
+    border-radius: 15%;
+    border-color: none;
+}
+#up, #down{
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 7px;
+    border-radius: 25%;
+}
+#up{
+    position: sticky;
+    top: 10px;
+    z-index: 2;
+}
+#down{
+    position: fixed;
+    left: 10px;
+    z-index: 1;
+}
+#up a, #down a{
+    color: #010d19;
+    text-decoration: none;
+}
+#logo a{
+    align-content: flex-start;
+    color:#ee930a;
+    text-decoration: none;
+}
+nav > div{
+    position: relative;
+    left: 200px;
+    padding: 10px;
+    
+}
+#logo{
+    margin-right: 5px;
+    position: absolute;
+    top: 20px;
+}
+.partOfLogo {
+    position:relative;
+    border: 8px solid gold;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+blockquote, cite {
+    text-align: right;
+    display: block;
+}
+dt ~ dd {
+    font-family: "Courier New", Courier, monospace;
+}
+cite + p{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: small;
+} 
+
+.solarSystem img{
+    width: 650px;
+    height: 500px;
+    float: inherit; 
+}
+nav div a:link{
+    color:white; 
+    text-decoration: none;
+}
+address a, nav a:visited{
+    color:rgb(94, 182, 240);
+}
+nav a:hover{
+    color: rgb(207, 107, 25);
+}
+nav a:active{
+    color: rgb(201, 33, 7);
+}
+#img1 {
+    float: right;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+}
+#imgSection {
+    float: left;
+    padding: 20px;
+}
+section{
+    margin-left: 60px;
+    margin-top: 20px;
+    
+}
+address{
+    text-align: center;
+}
+ul{
+    list-style: square;
+}
+
