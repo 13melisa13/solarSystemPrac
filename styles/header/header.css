@@ -1,0 +1,132 @@
+header {
+    background: #042b52;
+    color: #fff;
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    height: 7vh;
+    padding:2%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav {
+    width: 60%;
+    text-align: right;
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+nav div a:link{
+  color:white; 
+  text-decoration: none;
+}
+address a, nav a:visited{
+  color:rgb(94, 182, 240);
+}
+nav a:hover{
+  color: rgb(207, 107, 25);
+}
+nav a:active{
+  color: rgb(201, 33, 7);
+}
+#logo a{
+  align-content: flex-start;
+  color:#ee930a;
+  text-decoration: none;
+}
+.partOfLogo {
+    position:relative;
+    border: 8px solid gold;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+} 
+#menu__toggle {
+        opacity: 0;
+    }
+@media (orientation:portrait) {
+    header{
+        padding: 5%;
+        font-size: xx-large;
+        position: fixed;
+        z-index: 2;
+    }
+  
+    
+    .menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: absolute;
+    right: 10%;
+    width: 5%;
+    height: 7%;
+    z-index: 2;
+    }
+     
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: #f4eaea;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -10px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 10px;
+      }
+      .menu__box {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        gap: 3%;
+        position: fixed;
+        visibility: hidden;
+        top:0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 13vh;
+        padding-top: 1vh;
+        list-style: none;
+        text-align: center;
+        background-color: #002137;
+        z-index: 1;
+       
+      }
+      
+      .menu__box > div {
+        display: block;
+        padding: 12px 24px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .menu__box>div:hover {
+        background-color: #d7cfdc;
+      }
+      #menu__toggle:checked ~ .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      #menu__toggle:checked ~ .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        visibility: visible;
+        left: 0;
+      }
+}

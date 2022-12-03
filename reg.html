@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Solar System </title> 
+<link rel="icon" href="favicon/favicon.ico" s="any">
+<link rel="stylesheet" href="styles/reg.css">
+<!-- <script src="reg.js"></script> -->
+</head>
+<body> 
+<main>
+<form action="" method="post">
+<fieldset>
+
+<legend>Регистрация</legend>
+<div>
+
+<input type="text" name="name" id="name"   autocomplete="off"
+maxlength="15" >
+<label for="name">Имя</label>
+</div>
+
+<div>
+<input type="text" name="login" id="login"   autocomplete="off"
+maxlength="15" pattern="[a-zA-Z0-9]">
+<label for="login">Логин</label>
+</div>
+
+<div>
+<input type="password" id="password-input" 
+size="15" maxlength="15"autocomplete="off" >
+<label for="password-input">Пароль</label>  
+</div>
+<div>
+
+<input type="tel" id = "tel" autocomplete="off" >
+<label for="tel">Телефон</label>
+</div>
+<div class="email">
+<input type="email" name ="email" id="email" autocomplete="off">
+<label for="email">Почта</label>
+</div>
+
+<div class="wrapper">
+    <canvas id="canvas" width="200" height="70"></canvas>
+</div>
+<div class="captcha">
+<input type="text" id="input">
+<label for="email">Текст с картинки</label>
+<button id="submit">Проверить</button>
+<!-- <input type="button" id="submit" value="Проверить"> -->
+</div>
+<button id="signUp" disabled>Продолжить</button>
+<!-- <input type="submit" id="signUp" value="Продолжить" name ="r" disabled> -->
+<script src="captcha.js"></script>
+</fieldset>
+</form>    
+</main>
+</body>
+</html>

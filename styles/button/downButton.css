@@ -1,0 +1,39 @@
+#down:hover {
+    color: rgb(231, 69, 69);
+  }
+#down:hover::before {
+    transform: skew(45deg, 45deg);
+  }
+#down::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #c0aee2;
+    transition: all .2s;
+    z-index: -1;
+  }
+#down{
+    font-size: 1em;
+    border: 2px solid #807492;
+    color: #56486e;
+    transition: all 1s;
+    overflow: hidden;
+    z-index: 3;
+    position: fixed;
+    top: 17vh;
+    left: 1%;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    width: min-content;
+    height: min-content;
+
+}
+#down a{
+    color: #010d19;
+    text-decoration: none;
+}

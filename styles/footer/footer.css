@@ -1,0 +1,83 @@
+footer {
+    background: #042b52;
+    color: #fff;
+    position: absolute;
+    left:0;
+    right: 0;
+    display: grid;
+    padding: 2vh 3vw;
+    font-size: 1em;
+}
+footer h4::before{
+    width: 3em;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+}
+footer a:hover{
+    color: aqua;
+    font-size: 1.1em;
+}
+footer a{
+    color:rgb(94, 182, 240);
+    text-decoration: none;
+    transition: .8s;
+}
+footer h4{
+    position: relative;
+    padding: 0.5em 0;
+}
+footer > div > div{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1em;
+}
+footer > div > address > div{
+    margin: 1.5em 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    column-gap: 1em;
+}
+footer > div > address > div > .i{
+    grid-row: span 2;
+}
+address{
+    text-align: left;
+}
+address,.butBox{
+    display: block;
+}
+footer{
+        grid-template-columns: 2fr repeat(3,1fr);
+        gap:2em;      
+}
+.cop{
+        text-align: center;
+        grid-column: span 4;
+}
+footer > div > div > a{
+    display: block;
+    margin: .3em 0;
+}
+@media (max-device-width:991px) and (min-device-width:768px){
+    footer{
+        grid-template-columns: repeat(2,1fr);
+        gap:1em;      
+    }
+    .cop{
+        text-align: center;
+        grid-column: span 2;
+    }
+} 
+@media (max-device-width:768px){
+    footer{
+        grid-template: repeat(4,1fr)/repeat(1,1fr);
+    }
+    .cop{
+        text-align: center;
+        grid-column: span 1;
+    }
+}

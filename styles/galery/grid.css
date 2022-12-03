@@ -1,0 +1,92 @@
+.grid > div{
+    
+    display: grid;
+    
+    
+}
+.grid > div > div:hover .content{
+    opacity: 1;
+    visibility: visible;
+}
+.grid > div > div:hover::before{
+    box-shadow: 0px -74px 60px 20px rgba(34, 60, 80, 0.81) inset;
+}
+.grid > div > div::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: .9s;
+    z-index: 1;
+}
+.grid > div  > div{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.grid div div .content{
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: min-content;
+    z-index: 1;
+    color: aliceblue;
+    transition: .9s;
+    visibility: hidden;
+    padding: .5em;
+    text-align: center;
+}
+.grid > div img{
+    width: 100%;
+    height: 100%;
+}
+.grid > div > div:nth-child(1),.grid > div > div:nth-child(5){
+    width: 200px;
+    height: calc(400px+1em);
+    grid-row: span 2;
+}
+.grid > div > div:nth-child(2),.grid > div > div:nth-child(6),
+.grid > div > div:nth-child(4),.grid > div > div:nth-child(8){
+    width: 200px;
+    height: 200px;
+}
+.grid > div > div:nth-child(3),.grid > div > div:nth-child(7){
+    width:  calc(400px+1em);
+    height: 200px;
+    grid-column: span 2;
+}
+
+.grid{
+    order:12;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-device-width:991px) {
+    .grid > div{
+        grid-template: repeat(3,200px)/repeat(4,200px);
+    }
+    
+}
+@media (max-device-width:991px) and (min-device-width:768px){
+    .grid > div{
+        grid-template: repeat(4,200px)/repeat(3,200px);      
+    }
+}
+
+@media (max-device-width:768px){
+    .grid > div{
+        grid-template: repeat(6,200px)/repeat(2,200px);      
+    }
+}
+.grid > div{
+    gap:.5em;
+    justify-items: stretch;
+    grid-auto-flow: dense;
+}
