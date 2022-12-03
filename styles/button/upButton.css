@@ -1,0 +1,40 @@
+#up a{
+    color: #010d19;
+    text-decoration: none;
+    
+}
+#up{
+    font-size: 1em;
+    border: 2px solid #764abc;
+    color: #764abc;
+    transition: all 1s;
+    overflow: hidden;
+    z-index: 10;
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    width: min-content;
+    height: min-content;
+}
+#up :hover {
+    color: #fff;
+  }
+#up:hover::before {
+        transform: translateY(0);
+  }
+#up::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #764abc;
+    transition: all 1s;
+    z-index: -1;
+    transform: translateY(100%);
+  }

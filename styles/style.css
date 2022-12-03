@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+h3{
+    font-family: 'Noto Sans Mono', monospace;
+}
+h2{
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Bungee Spice', cursive;
+    font-size: xx-large;
+    text-align: center;
+}
+body { 
+    background: #889cd5; 
+}
+blockquote, cite {
+    text-align: right;
+    display: block;
+}
+dt ~ dd {
+    font-family: "Courier New", Courier, monospace;
+}
+cite + p{
+    font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: small;
+} 
+ul{
+    list-style: square;
+}
+h1{
+    width: 90%;
+}
+aside {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: justify; 
+    padding: 1%;
+    color: #fff;
+}
+#img1 {
+    float: right;
+    width: 600px;
+    height: 450px;
+    padding: 20px;
+}
+#sectionVideo{
+    display: flex;
+    justify-content: center;
+}
+iframe{
+    width:600px; 
+    height:380px;
+}
+div {
+    display: inline-block;
+}   
+

@@ -1,0 +1,21 @@
+#like{
+    width: 8em;
+    height: 2em;
+    color: brown;
+    background-color: blanchedalmond;
+    border-radius: 2em;
+    font-size: 1em;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    z-index: 1;
+}
+.like canvas{
+    width:100%;
+    height: 100vh;
+    /* background-color: black; */
+    top:0;
+}
+.like{
+    position: relative;
+}

@@ -1,0 +1,37 @@
+#logup :hover {
+    color: #fff;
+  }
+#logup:hover::before {
+        background-color: #b90440;
+        color: #fff;
+        box-shadow: 0 12px 25px #010d19 inset;
+  }
+#logup::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #334998;
+    transition: all 1s;
+    box-shadow: 0px 0px 7px 3px rgb(34 60 80 / 60%);
+}    
+#logup{
+    font-size: 1em;
+    overflow: hidden;
+    position: absolute;
+    bottom: 3vh;
+    left: 3vw;
+    height: 5vh;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    transition: all 1s;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    width: min-content;
+    height: min-content;
+    
+} 
