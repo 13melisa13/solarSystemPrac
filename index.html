@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8"> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Solar System </title> 
+<title>Solar System</title> 
 <link rel="icon" href="favicon.ico" s="any">
 <link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/98db032af2.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body> 
     <header>     
@@ -23,21 +25,39 @@
         <div><a href="index.html#occurrence">Возникновение</a></div>
         <div><a href="index.html#structure">Строение</a></div>
         <div><a href="index.html#image">Галерея</a></div> 
-        <div><a href="reg.html">Регистрация</a></div>     
+        <div><a href="reg.html"><span ></span>
+          <span></span>
+          <span></span>
+          <span></span>Регистрация</a></div>     
       </nav>
     </header>
     <main>
-      
-        <aside>
-          <p>Изучение солнечной системы - хороший повод пересмотреть любимые мультфильмы</p>
-          <a href="https://www.kinopoisk.ru/film/279102/"><img src="https://i.pinimg.com/474x/4e/74/72/4e74721dbe9900e686b76ac55f16d88b--ipad-air-wallpaper-disney-wallpaper.jpg"  
-            alt="Beautiful System of the Sun" width="100%" ></a>
-          
-        </aside>
+      <aside>
+        <p>Изучение солнечной системы - хороший повод пересмотреть любимые мультфильмы</p>
+        <a href="https://www.kinopoisk.ru/film/279102/"><img src="https://i.pinimg.com/474x/4e/74/72/4e74721dbe9900e686b76ac55f16d88b--ipad-air-wallpaper-disney-wallpaper.jpg"  
+          alt="Beautiful System of the Sun" width="100%" ></a>
         
-          <h1 id="start">Солнечная система</h1>
+      </aside>
+      <div class="box">
+        <div class="notification">
+          <i class="fa fa-bell" aria-hidden="true"></i>
+          <ol class="ol">
+            <li class="icon"> <span>Text</span></li>
+            <li class="icon"> <span>Text</span></li>
+            <li class="icon"> <span>Text</span></li>
+            <li class="icon"> <span>Text</span></li>
+          </ol>
+        <span class="num">4</span>
+        </div>
+      </div>
+
+          
+         
+          
           <div id="down"><a href="index.html#image">Карта</a></div>
         <section id = "section1">
+          <h1 id="start">Солнечная система</h1>
+          
           <blockquote>Астрономия полезна потому, что она возвышает нас над нами самими;<br>
           она полезна потому, что она величественна; она полезна потому, <br>
           что она прекрасна. Именно она являет нам, как ничтожен <br>
@@ -55,6 +75,7 @@
           в рукаве Ориона.
           </p>
         </section>
+       
         <section id = section2>
           <h2 id="occurrence">Возникновение солнечной системы</h2>
           <p>Поскольку Солнечной системе миллиарды лет, люди могут лишь строить 
@@ -72,7 +93,7 @@
           уплотнение, ставшее центром гравитационного коллапса. 
           Он постепенно начал притягивать к себе окружающие вещества.
           </li>
-
+          
           <li>Из-за притяжения веществ размеры облака начали уменьшаться,
           при этом росла скорость вращения. Постепенно его форма 
           превратилась в диск.</li>
@@ -149,12 +170,37 @@
         </section>
         <section id="section">
           <h2 id="image">Галерея</h2>
-          <div class="solarSystem">
-          <img src="imgMap.jpg"  
-          usemap="#sunSystem">
           
-          <img src="img1.jpg">
-          <img src="img2.jpg">
+          <div class="solarSystem">
+          <div class="card"><div class="img">
+            <img src="imgMap.jpg"usemap="#sunSystem"> 
+            </div><div class="content">
+              <h4>Солнечная система</h4>
+              <p>Фотография интерактивна</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img">
+            <img src="img1.jpg"> </div>
+            <div class="content">
+              <h4>
+                
+              </h4>
+              <p>
+
+              </p>
+            </div>
+          </div><div class="card">
+            <div class="img"><img src="img2.jpg"> 
+            </div><div class="content">
+              <h4>
+                
+              </h4>
+              <p>
+
+              </p>
+            </div>
+          </div>
         </div>
         <map name="sunSystem">
               <area alt="space" href="https://ru.wikipedia.org/wiki/Космическое_пространство" 
@@ -204,9 +250,17 @@
        
         </section>
         <section id="sectionVideo">
-        <iframe src="video.html" frameborder="0" width="800" height="550"></iframe>
+        <iframe src="video.html" frameborder="0"></iframe>
       </section>
-      
+    <div width="100%">
+      <a id="logup" href="reg.html">
+      Регистрация</a>
+      <a id="loginA" href="login.html">
+        Вход</a>
+    </div>     
+ 
+
+</div>
     </main>
       <footer>
         
