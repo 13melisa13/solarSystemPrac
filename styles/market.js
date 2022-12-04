@@ -1,5 +1,5 @@
 let board = market.querySelector('.board');
-let basket = market.querySelector(".basket")
+let basket = market.querySelector(".basket");
 
     board.onmousedown = function(event) {
       event.preventDefault(); // предотвратить запуск выделения (действие браузера)
@@ -16,7 +16,8 @@ let basket = market.querySelector(".basket")
         let y = event.clientY - shiftY - market.getBoundingClientRect().top + top;
         product.style.zIndex = "100";
         product.style.cursor = "grabbing";
-       
+        document.documentElement.style.setProperty('--content', "#e0ae3a");
+        
         if (x < 0) {
           x = 0;
         }
@@ -38,6 +39,7 @@ let basket = market.querySelector(".basket")
 
       function onMouseUp() {
         product.style.cursor = "grab";
+        document.documentElement.style.setProperty('--content', "");
         document.removeEventListener('mouseup', onMouseUp);
         document.removeEventListener('mousemove', onMouseMove);
       }
