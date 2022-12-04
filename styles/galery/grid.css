@@ -46,14 +46,14 @@
 }
 
 .grid > div > div{
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
 }
 .grid .main{
-    grid-row: span 5;
+    grid-row: span 3;
     grid-column: span 5;
-    width: calc(180px * 5 + 4 * .5em);
-    height: calc(180px * 5 + 4 * .5em);
+    width: calc(100px * 5 + 4 * .5em);
+    height: calc(100px * 3 + 2 * .5em);
 }
 
 .grid{
@@ -65,7 +65,7 @@
 }
 @media (min-device-width:991px) {
     .grid > div{
-        grid-template: repeat(6,180px)/repeat(5,180px);
+        grid-template: repeat(4,100px)/repeat(5,100px);
     }
     
 }

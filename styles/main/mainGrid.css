@@ -18,9 +18,9 @@ main{
 @media (min-device-width:992px){
 
     aside{
-        
+        height: 40vh;
         grid-column-start: 2;
-        grid-row: span 2;
+        /* grid-row: span 2; */
     }
     section, .like{
         grid-column: span 2;
@@ -31,6 +31,9 @@ main{
     }
     #section1,#section2,.smallSection{
         grid-column: span 1;
+    }
+    .smallSection{
+        grid-row-start: 4;
     }
 }
    
