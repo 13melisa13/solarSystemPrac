@@ -43,7 +43,7 @@
         list-style-type: none; 
         counter-reset: num;
     }
-    .ol li:hover{
+    .ol .icon:hover{
         width: 110%;
         left: -7%;
         height: 2vh;
@@ -53,7 +53,7 @@
 @media (orientation:landscape) {
 
     .boxNote:hover{
-        transform: translate(2vw,-37vh);
+        transform: translate(2vw,-50vh);
     }
     .notification:hover{
         width: 300px;
@@ -83,7 +83,7 @@
         height: 380%;
         width: 100%;
     }
-    .ol li:hover{
+    .ol .icon:hover{
         width: 120%;
         left: -14%;
         height: 10%;
@@ -146,18 +146,18 @@
     list-style-type: none; 
     counter-reset: num;
 }
-.ol li:hover{
+.ol .icon:hover{
     background: #b90440;
     color: #fff;
     position: relative;
     font-size: large;
 }
-.ol li:hover::before {
+.ol .icon:hover::before {
     background: #fff;
     color: #b90440;
     padding: 2px 6px;
 }
-.ol li:before {
+.ol .icon:before {
     content: counter(num); 
     counter-increment: num;
     top: 0;
@@ -169,12 +169,16 @@
     border-radius: 50%;
     padding: 1px 5px;
 }
-.ol li{
+.ol .icon{
     position: relative;
     padding: 10px;
     border-radius: 15px;
     transition: all 0.5s ease-in;
     
+}
+.icon.selected{
+    border: #100f0f solid 2px;
+    background: #ce889f;
 }
 
 .close,.close::before,.close::after {
@@ -198,10 +202,10 @@
       }
       .close{
         cursor: pointer;
-        right: 0;
+        right: 3%;
         transform: rotate(45deg);
       }
-      .ol li:hover .close{
+      .ol .icon:hover .close{
         right: 2em;
       } 
       .notBox {

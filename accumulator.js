@@ -8,25 +8,61 @@ function showNotification(text){
         alert.remove();
     }, 1500)
 }
+
+// потенциальная цель переноса, над которой мы пролетаем прямо сейчас
+
+
 let ol = document.querySelector(".notification ol");
+ol.onmousedown = function (event){
+   
+    return false;
+}
+
+ol.addEventListener("click",(event) => {
+    let close = event.target.closest(".close");
+    if (close) {
+        let li = event.target.closest("li");
+        index = array.indexOf(li);
+        (array.splice(index,1)[0]).remove();  
+        document.getElementById('num').innerHTML = array.length; 
+    } else {
+        let li = event.target.closest("li");
+        if (!li) return;
+        let newClass;
+        if (li.className == "icon")
+            newClass = "icon selected";
+        else 
+            newClass = "icon";
+
+        if (event.ctrlKey || event.metaKey){
+            li.className = newClass;
+        } else {
+            for (const i of array){
+                i.className = "icon";
+            }
+            li.className = newClass;
+        }
+    }
+    });
+
+
+
+
+
+
+
+
+
 function create (){
-    
-    ol.addEventListener("click",(event) => {
-            let close = event.target.closest(".close");
-            if (!close) return;
-            let li = event.target.closest("li");
-            index = array.indexOf(li);
-            (array.splice(index,1)[0]).remove();  
-            document.getElementById('num').innerHTML = array.length; 
-        });
     let liText = new Array();
     while (true){
         let li = document.createElement("li");
         li.className = "icon";
-        let l = prompt("Текст для уведомления");
+        let l = +prompt("Текст для уведомления");
         let close = document.createElement("div");
         close.className = "close";
-        if (l != null && l != ""){    
+        console.log()
+        if (l != null && l != "" &&  !isNaN(l)){    
             li.textContent = l;
             liText.push(l);
         } else {
@@ -43,20 +79,13 @@ function create (){
 }
 document.getElementById("create").addEventListener("click", create);
 
-ol.ondblclick = function (){
-    return false;
-}
-
-
 
 
 let list = document.querySelectorAll(".notification ol li");
 let array = Array.from(list);
 
 function compare (a, b){
-    if (a.at(length-1) < b.at(length-1)) return -1;
-    if (a.at(length-1) == b.at(length-1)) return 0;
-    return 1;
+    return a-b;
 }
 document.getElementById("sort").addEventListener("click",() => {
     let arr = [];

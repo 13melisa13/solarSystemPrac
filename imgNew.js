@@ -22,7 +22,7 @@ function newImg(){
     let size = sizes [i];
     img.setAttribute("height", size.height);
     img.setAttribute("width", size.width);
-    console.log(container.clientWidth/2-img.width/2);
+    //console.log(container.clientWidth/2-img.width/2);
     img.style.left=(container.clientWidth/2-img.width/2)+"px";
     img.style.top=(container.clientHeight/2-img.height/2)+"px";
 }
