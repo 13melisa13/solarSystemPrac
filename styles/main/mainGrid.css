@@ -29,7 +29,7 @@ main{
         column-gap:2em;
         padding: 1vh 4vw;
     }
-    #section1,#section2{
+    #section1,#section2,.smallSection{
         grid-column: span 1;
     }
 }
