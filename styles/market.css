@@ -18,6 +18,7 @@
 
 .market .basket {
     border-radius: 5px;
+    text-align: center;
     background: #c87373;
     width: 50px;
     height: 65px;
