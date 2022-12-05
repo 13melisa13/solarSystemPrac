@@ -9,8 +9,16 @@ let basket = market.querySelector(".basket");
       
       document.addEventListener('mousemove', onMouseMove);
       document.addEventListener('mouseup', onMouseUp);
-      let currentDropable = null;
+      let isInside = false;
       function onMouseMove(event) {
+        if (product.getBoundingClientRect().left >= basket.getBoundingClientRect().left &&
+         product.getBoundingClientRect().top >= basket.getBoundingClientRect().top &&
+         product.getBoundingClientRect().bottom <= basket.getBoundingClientRect().bottom &&
+         product.getBoundingClientRect().right <= basket.getBoundingClientRect().right){
+          isInside = true;
+         } else {
+          isInside = false;
+         }
         let top =  product.offsetHeight * (-[...board.children].indexOf(product));
         let x = event.clientX - shiftX - market.getBoundingClientRect().left;
         let y = event.clientY - shiftY - market.getBoundingClientRect().top + top;
@@ -41,31 +49,30 @@ let basket = market.querySelector(".basket");
         product.style.left = x + 'px';
         product.style.top = y + 'px';
 
-        // product.hidden = true;
-         let basketFind = null;//document.elementFromPoint(event.clientX,event.clientY);
-        // product.hidden = false;
-
-        if (event.clientX <= basket.getBoundingClientRect().right &&
-        event.clientX >= basket.getBoundingClientRect().left &&
-        event.clientY >= basket.getBoundingClientRect().top &&
-        event.clientY <= basket.getBoundingClientRect().bottom){
-          basketFind = basket;
+        // if (event.clientX <= basket.getBoundingClientRect().right &&
+        // event.clientX >= basket.getBoundingClientRect().left &&
+        // event.clientY >= basket.getBoundingClientRect().top &&
+        // event.clientY <= basket.getBoundingClientRect().bottom)
+        
+        
+        
+         if (product.getBoundingClientRect().left >= basket.getBoundingClientRect().left &&
+         product.getBoundingClientRect().top >= basket.getBoundingClientRect().top &&
+         product.getBoundingClientRect().bottom <= basket.getBoundingClientRect().bottom &&
+         product.getBoundingClientRect().right <= basket.getBoundingClientRect().right){
+          if (!isInside){
+            basket.textContent = +basket.textContent + +product.textContent;
+            isInside = true;
+          } 
           document.documentElement.style.setProperty('--content', "green");
-        }
-            
-        if (currentDropable != basketFind){
-            if (currentDropable){
-              document.documentElement.style.setProperty('--content', "red");  
-              basket.textContent = 
-              +market.querySelector(".basket").textContent - +product.textContent;
-              //alert(market.querySelector(".basket").textContent);
-            }
-            currentDropable = basketFind;
-            if (currentDropable){
-              document.documentElement.style.setProperty('--content', "green");
-              basket.textContent = +basket.textContent + +product.textContent;
-              //alert(basket.textContent);
-            }
+        } else {
+          if (isInside){
+            isInside = false;
+            document.documentElement.style.setProperty('--content', "red");  
+            basket.textContent = 
+            +market.querySelector(".basket").textContent - +product.textContent;
+          }
+          
         }
 
         
